@@ -1,3 +1,6 @@
+from sklearn.neighbors import KNeighborsClassifier
+import numpy as np
+
 # Datos de entrenamiento
 X = np.array([
     [2, 0],  # Caso 1
@@ -26,23 +29,5 @@ clase_predicha = knn.predict(nuevo_punto)
 
 print(f"El punto {nuevo_punto[0]} se clasifica como: {clase_predicha[0]}")
 
-El punto [2.5, 2.5] se clasificará según su vecino más cercano usando distancia de Manhattan.
-Para verificar manualmente,Calculamos las distancias de Manhattan desde (2.5, 2.5) a todos los puntos:
-
-|2.5-2| + |2.5-0| = 0.5 + 2.5 = 3.0
-
-|2.5-4| + |2.5-4| = 1.5 + 1.5 = 3.0
-
-|2.5-1| + |2.5-1| = 1.5 + 1.5 = 3.0
-
-|2.5-2| + |2.5-4| = 0.5 + 1.5 = 2.0
-
-|2.5-2| + |2.5-2| = 0.5 + 0.5 = 1.0
-
-|2.5-2| + |2.5-3| = 0.5 + 0.5 = 1.0
-
-|2.5-3| + |2.5-4| = 0.5 + 1.5 = 2.0
-
-|2.5-3| + |2.5-3| = 0.5 + 0.5 = 1.0
 
 
